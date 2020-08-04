@@ -61,4 +61,4 @@ install_manifest.txt
 /**/build.*
 
 .tags
-.vscode
+# .vscode
