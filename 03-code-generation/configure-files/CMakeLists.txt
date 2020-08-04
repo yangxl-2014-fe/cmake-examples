@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Set the project name
-project (cf_example)
+project (03_cf_example)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # set a project version
 set (cf_example_VERSION_MAJOR 0)
@@ -18,12 +19,13 @@ configure_file(ver.h.in ${PROJECT_BINARY_DIR}/ver.h)
 configure_file(path.h.in ${PROJECT_BINARY_DIR}/path.h @ONLY)
 
 # Add an executable
-add_executable(cf_example
+add_executable(03_cf_example
     main.cpp
 )
 
 # include the directory with the new files
-target_include_directories( cf_example
+target_include_directories( 03_cf_example
     PUBLIC
-        ${CMAKE_BINARY_DIR}
+        # ${CMAKE_BINARY_DIR}
+        ${PROJECT_BINARY_DIR}
 )

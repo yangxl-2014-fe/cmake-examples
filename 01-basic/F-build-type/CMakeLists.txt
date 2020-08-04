@@ -13,7 +13,8 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 # Set the project name
-project (build_type)
+project (01F_build_type)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # Add an executable
-add_executable(cmake_examples_build_type main.cpp)
+add_executable(01F_cmake_examples_build_type main.cpp)

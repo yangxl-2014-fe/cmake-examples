@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Set the project name
-project (boost_unit_test)
+project (05_boost_unit_test)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 
 # find a boost install with the libraries unit_test_framework
@@ -30,16 +31,16 @@ target_link_libraries(example_boost_unit_test
 enable_testing()
 
 # Add a testing executable
-add_executable(unit_tests unit_tests.cpp)
+add_executable(05_unit_tests unit_tests.cpp)
 
-target_link_libraries(unit_tests
+target_link_libraries(05_unit_tests
     example_boost_unit_test
     Boost::unit_test_framework
 )
 
-target_compile_definitions(unit_tests
+target_compile_definitions(05_unit_tests
     PRIVATE
         BOOST_TEST_DYN_LINK
 )
 
-add_test(test_all unit_tests)
+add_test(test_all_boost 05_unit_tests)

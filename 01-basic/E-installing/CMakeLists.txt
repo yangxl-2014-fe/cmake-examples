@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(cmake_examples_install)
+project(01E_cmake_examples_install)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 ############################################################
 # Create a library
@@ -21,12 +22,12 @@ target_include_directories(cmake_examples_inst
 ############################################################
 
 # Add an executable with the above sources
-add_executable(cmake_examples_inst_bin
+add_executable(01E_cmake_examples_inst_bin
     src/main.cpp
 )
 
 # link the new hello_library target with the hello_binary target
-target_link_libraries( cmake_examples_inst_bin
+target_link_libraries( 01E_cmake_examples_inst_bin
     PRIVATE 
         cmake_examples_inst
 )
@@ -36,7 +37,7 @@ target_link_libraries( cmake_examples_inst_bin
 ############################################################
 
 # Binaries
-install (TARGETS cmake_examples_inst_bin
+install (TARGETS 01E_cmake_examples_inst_bin
     DESTINATION bin)
 
 # Library

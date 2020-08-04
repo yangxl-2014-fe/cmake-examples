@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Set the project name
-project (hello_cmake)
+project (01I_hello_cmake)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # Add an executable
-add_executable(hello_cmake main.cpp)
+add_executable(01I_hello_cmake main.cpp)

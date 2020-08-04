@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Set the project name
-project (hello_cpp11)
+project (01Li_hello_cpp11)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # try conditional compilation
 include(CheckCXXCompilerFlag)
@@ -21,4 +22,4 @@ else()
 endif()
 
 # Add an executable
-add_executable(hello_cpp11 main.cpp)
+add_executable(01Li_hello_cpp11 main.cpp)

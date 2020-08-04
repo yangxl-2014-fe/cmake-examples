@@ -1,5 +1,6 @@
 # Set the project name
-project (subproject1)
+project (04_cppcheck_subproject1)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES

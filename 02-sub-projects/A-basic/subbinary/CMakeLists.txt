@@ -1,7 +1,8 @@
-project(subbinary)
+project(02_subbinary)
 
 # Create the executable
 add_executable(${PROJECT_NAME} main.cpp)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # Link the static library from subproject1 using it's alias sub::lib1
 # Link the header only library from subproject2 using it's alias sub::lib2

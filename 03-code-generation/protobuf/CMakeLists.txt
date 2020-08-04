@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Set the project name
-project (protobuf_example)
+project (03_protobuf_example)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # find the protobuf compiler and libraries
 find_package(Protobuf REQUIRED)
@@ -21,19 +22,19 @@ message ("PROTO_SRCS = ${PROTO_SRCS}")
 message ("PROTO_HDRS = ${PROTO_HDRS}")
 
 # Add an executable
-add_executable(protobuf_example
+add_executable(03_protobuf_example
     main.cpp
     ${PROTO_SRCS}
     ${PROTO_HDRS})
 
-target_include_directories(protobuf_example
+target_include_directories(03_protobuf_example
     PUBLIC
     ${PROTOBUF_INCLUDE_DIRS}
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 # link the exe against the libraries
-target_link_libraries(protobuf_example
+target_link_libraries(03_protobuf_example
     PUBLIC
     ${PROTOBUF_LIBRARIES}
 )

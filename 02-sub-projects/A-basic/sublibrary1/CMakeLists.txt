@@ -1,5 +1,6 @@
 # Set the project name
-project (sublibrary1)
+project (02_sublibrary1)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 # Add a library with the above sources
 add_library(${PROJECT_NAME} src/sublib1.cpp)

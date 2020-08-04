@@ -1,17 +1,18 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(hello_library)
+project(01C_hello_library)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 ############################################################
 # Create a library
 ############################################################
 
 #Generate the static library from the library sources
-add_library(hello_library STATIC 
+add_library(01C_hello_library STATIC 
     src/Hello.cpp
 )
 
-target_include_directories(hello_library
+target_include_directories(01C_hello_library
     PUBLIC 
         ${PROJECT_SOURCE_DIR}/include
 )
@@ -22,12 +23,12 @@ target_include_directories(hello_library
 ############################################################
 
 # Add an executable with the above sources
-add_executable(hello_binary 
+add_executable(01C_hello_binary 
     src/main.cpp
 )
 
 # link the new hello_library target with the hello_binary target
-target_link_libraries( hello_binary
+target_link_libraries( 01C_hello_binary
     PRIVATE 
-        hello_library
+        01C_hello_library
 )

@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Set the project name
-project (third_party_include)
+project (01H_third_party_include)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 
 # find a boost install with the libraries filesystem and system
@@ -15,10 +16,10 @@ else()
 endif()
 
 # Add an executable
-add_executable(third_party_include main.cpp)
+add_executable(01H_third_party_include main.cpp)
 
 # link against the boost libraries
-target_link_libraries( third_party_include
+target_link_libraries( 01H_third_party_include
     PRIVATE
         Boost::filesystem
 )

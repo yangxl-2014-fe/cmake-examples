@@ -1,5 +1,6 @@
 # Set the project name
-project (sublibrary2)
+project (02_sublibrary2)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 add_library(${PROJECT_NAME} INTERFACE)
 add_library(sub::lib2 ALIAS ${PROJECT_NAME})
