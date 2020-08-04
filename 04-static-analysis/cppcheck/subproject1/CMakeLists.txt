@@ -8,7 +8,7 @@ set(SOURCES
 )
 
 # include the file with the function then call the macro
-include(${CMAKE_SOURCE_DIR}/cmake/analysis.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/analysis.cmake)
 add_analysis(${PROJECT_NAME} SOURCES)
 
 # Add an executable with the above sources

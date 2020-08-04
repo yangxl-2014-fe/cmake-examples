@@ -1,11 +1,14 @@
 cmake_minimum_required (VERSION 3.5)
 
-project(cppcheck_analysis)
+project(04_cppcheck_analysis)
 
 # Add a custom CMake Modules directory
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules
                       ${CMAKE_MODULE_PATH})
 
+message(NOTICE "  ------> CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
+
+# include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/FindCppCheck.cmake)
 # find the cppcheck binary
 find_package(CppCheck)
 
@@ -19,8 +22,8 @@ add_subdirectory(subproject2)
 
 # Add the "make analysis" target
 if( CPPCHECK_FOUND )
-    add_custom_target(analysis)
-    ADD_DEPENDENCIES(analysis ${ALL_ANALYSIS_TARGETS})
-    set_target_properties(analysis PROPERTIES EXCLUDE_FROM_ALL TRUE)
+    add_custom_target(04_cppcheck_analysis)
+    ADD_DEPENDENCIES(04_cppcheck_analysis ${ALL_ANALYSIS_TARGETS})
+    set_target_properties(04_cppcheck_analysis PROPERTIES EXCLUDE_FROM_ALL TRUE)
     message("analysis analysis targets are ${ALL_ANALYSIS_TARGETS}")
 endif()
