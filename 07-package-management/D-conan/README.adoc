@@ -116,7 +116,7 @@ fmt/5.3.0@bincrafters/stable
 
 ## Inspecting Packages
 
-You can then inspect a package using the `conan inspect` command. To inspect one one of the fmt packages from the search command above you can run:
+You can then inspect a package using the `conan inspect` command. To inspect one of the fmt packages from the search command above you can run:
 
 [source,bash]
 ----
